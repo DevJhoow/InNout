@@ -3,6 +3,9 @@
 require_once(dirname(__FILE__, 2). '/src/config/config.php');
 require_once(dirname(__FILE__, 2). '/src/models/User.php');
 
-$user = new User(['key_Name' => 'value_jonathan']);
+$users = User::get([], 'email');
 
-print_r($user);
+foreach($users as $user) {
+    echo $user->email ; 
+    echo '<br>';
+}
