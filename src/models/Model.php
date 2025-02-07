@@ -36,6 +36,7 @@ class Model {
         }
     }
 
+    // retotnar usuarios da classe User , inserilos dentro de um array 
     public static function get($filters = [], $columns)
     {
         $objects = [];
