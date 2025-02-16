@@ -36,6 +36,15 @@ class Model {
         }
     }
 
+    // pega somente um registro 
+    public static function getOne($filters = [], $columns = '*')
+    {
+        $class = get_called_class();
+        $result = static::getSResultSetFromSelect($filters, $columns);
+
+        return $result ? new $class($result->fetch_assoc()) : null;
+    }
+
     // retotnar usuarios da classe User , inserilos dentro de um array 
     public static function get($filters = [], $columns)
     {

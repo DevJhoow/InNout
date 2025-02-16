@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="assets/css/icofont.min.css">
     <link rel="stylesheet" href="assets/css/login.css">
     
-    <title>In 'N Out </title>
+    <title> In 'N Out </title>
 </head>
 <body>
-    <form class="form-login" action="" method="post">
+    <form class="form-login" action="#" method="post">
         <div class="login-card card">
             <!-- cabecaldo do card  -->
             <div class="card-header">
@@ -23,9 +23,12 @@
             </div>
             <!-- formulario do card  -->
             <div class="card-body">
+
+                <?php include(TEMPLATE_PATH. '/messages.php') ?> <!--message de erro --> 
+
                 <div class="form-group">
                     <label for="email"> E-mail </label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="insira o e-mail">
+                    <input type="email" id="email" name="email" class="form-control"  placeholder="insira o e-mail">
                 </div>
 
                 <div class="form-group">
@@ -40,6 +43,6 @@
             </div> 
         </div>
     </form>
-    
+
 </body>
 </html>
