@@ -10,7 +10,7 @@ if(count($_POST) > 0) {
 
     try {
         $user = $login->checkLogin(); // vai chegar o que o usuario inseriu, que estao armazenados no $_POST
-        echo "Usuario $user->name logado ";
+        header("Location: day_records.php");
     } catch(AppException $e) { // erro
         $exception = $e;
     }
