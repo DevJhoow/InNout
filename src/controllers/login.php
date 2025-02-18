@@ -16,4 +16,5 @@ if(count($_POST) > 0) {
     }
 }
 
+//depois de fazer toda a logica renderixe o login da pasta views 
 loadView('login', $_POST + ['exception' => $exception]);
