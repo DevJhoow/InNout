@@ -1,7 +1,7 @@
 <?php
 
 loadModel('Login'); //trouxemos o a classe login para usarmos o metodo 
-
+session_start();
 $exception = null ; 
 
 if(count($_POST) > 0) {
@@ -10,6 +10,7 @@ if(count($_POST) > 0) {
 
     try {
         $user = $login->checkLogin(); // vai chegar o que o usuario inseriu, que estao armazenados no $_POST
+        $_SESSION['user'] = $user;
         header("Location: day_records.php");
     } catch(AppException $e) { // erro
         $exception = $e;
